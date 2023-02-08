@@ -1,0 +1,55 @@
+{
+  "compilerOptions": {
+    "lib": [
+      "esnext",
+      "dom",
+      "dom.iterable",
+      "scripthost"
+    ],
+    "target": "esnext",
+    "outDir": "lib",
+    "declaration": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "isolatedModules": false,
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "strictNullChecks": false,
+    "removeComments": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "allowJs": true,
+    "jsx": "preserve",
+    "baseUrl": "./",
+    "paths": {
+      "@src/*": ["src/*"],
+      "tdesign-vue-next": ["src/*"],
+      "@common/*": ["src/_common/*"],
+      "@test/utils": ["test/utils"]
+    },
+    "types": ["unplugin-vue-define-options/macros-global"]
+  },
+  "include": [
+    "./**/*.ts",
+    "./**/*.tsx",
+    "src/**/*.vue",
+    "scripts/rollup.config.js",
+    "node_modules/unplugin-vue-define-options/macros-global.d.ts",
+    "node_modules/unplugin-vue-define-options/macros-global.d.ts"
+  ],
+
+  "exclude": [
+    "node_modules",
+    "src/_common",
+    "dist",
+    "lib",
+    "cjs",
+    "esm",
+    "es",
+    "global.d.ts"
+  ],
+  "compileOnSave": false
+}
