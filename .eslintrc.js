@@ -11,15 +11,10 @@ module.exports = {
     ecmaVersion: 2020,
     parser: '@typescript-eslint/parser',
     sourceType: 'module',
-    extraFileExtensions: ['.vue'],
+    extraFileExtensions: ['.vue', '.ts'],
   },
   plugins: ['vue', '@typescript-eslint', 'lodash'],
-  extends: [
-    'plugin:json/recommended',
-    'plugin:vue/vue3-recommended',
-    '@vue/airbnb',
-    '@vue/typescript/recommended',
-  ],
+  extends: ['plugin:json/recommended', 'plugin:vue/vue3-recommended', '@vue/airbnb', '@vue/typescript/recommended'],
   rules: {
     'no-undef': 0,
     '@typescript-eslint/padding-line-between-statements': [
@@ -93,17 +88,7 @@ module.exports = {
     'import/prefer-default-export': 0,
     'import/no-extraneous-dependencies': 0,
     'import/no-unresolved': 0,
-    'import/extensions': [
-      'error',
-      'ignorePackages',
-      {
-        js: 'never',
-        mjs: 'never',
-        jsx: 'never',
-        ts: 'never',
-        tsx: 'never',
-      },
-    ],
+    'import/extensions': 0,
     'no-shadow': 'off',
     '@typescript-eslint/no-shadow': 'error',
     curly: 'error', // 强制if括号包裹，无效
