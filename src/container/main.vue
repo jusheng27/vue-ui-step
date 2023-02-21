@@ -13,6 +13,7 @@ defineOptions({
 <style lang="scss">
 .el-main {
   flex: 1;
+  flex-basis: auto;
   box-sizing: border-box;
   overflow: auto;
 }

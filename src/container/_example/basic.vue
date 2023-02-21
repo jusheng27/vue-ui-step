@@ -32,7 +32,7 @@
   }
 
   .el-main {
-    flex-basis: 150px;
+    height: 150px;
     background: #ecf5ff;
   }
 

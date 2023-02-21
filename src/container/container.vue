@@ -31,6 +31,7 @@ const style = computed(() => ({
   display: flex;
   flex-direction: row;
   flex: 1;
+  flex-basis: auto;
   box-sizing: border-box;
 }
 </style>
