@@ -32,6 +32,7 @@ const style = computed(() => ({
   flex-direction: row;
   flex: 1;
   flex-basis: auto;
+  min-width: 0;
   box-sizing: border-box;
 }
 </style>

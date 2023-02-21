@@ -8,3 +8,7 @@ spline: layout
 
 ## 经典详情页布局
 {{ basic }}
+
+
+## min-width: 0
+{{ minWidth }} 
