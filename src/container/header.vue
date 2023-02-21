@@ -1,10 +1,10 @@
 <template>
-  <div
+  <header
     class="el-header"
     :style="style"
   >
     <slot />
-  </div>
+  </header>
 </template>
 
 <script lang="ts" setup>

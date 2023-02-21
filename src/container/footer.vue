@@ -1,10 +1,10 @@
 <template>
-  <div
+  <footer
     class="el-footer"
     :style="style"
   >
     <slot />
-  </div>
+  </footer>
 </template>
 
 <script lang="ts" setup>

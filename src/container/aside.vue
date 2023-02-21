@@ -1,10 +1,10 @@
 <template>
-  <div
+  <aside
     class="el-aside"
     :style="style"
   >
     <slot />
-  </div>
+  </aside>
 </template>
 
 <script lang="ts" setup>
