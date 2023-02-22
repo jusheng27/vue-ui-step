@@ -3,7 +3,7 @@
     <el-container>
       <el-aside>Aside</el-aside>
 
-      <el-container direction="vertical">
+      <el-container>
         <el-header>Header</el-header>
         <el-main>
           <p>
