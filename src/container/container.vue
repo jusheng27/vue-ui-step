@@ -1,8 +1,5 @@
 <template>
-  <section
-    class="el-container"
-    :style="style"
-  >
+  <section :class="['el-container', isVertical && 'is-vertical']">
     <slot />
   </section>
 </template>
@@ -50,10 +47,6 @@ const isVertical = computed(() => {
 
   return false;
 });
-
-const style = computed(() => ({
-  'flex-direction': isVertical.value ? 'column' : 'row',
-}));
 </script>
 
 <style lang="scss">
@@ -64,5 +57,9 @@ const style = computed(() => ({
   flex-basis: auto;
   min-width: 0;
   box-sizing: border-box;
+
+  &.is-vertical {
+    flex-direction: column;
+  }
 }
 </style>
