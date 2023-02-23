@@ -2,6 +2,7 @@
 
 // 布局
 export * from './container';
+export * from './divider';
 
 // 导航
 

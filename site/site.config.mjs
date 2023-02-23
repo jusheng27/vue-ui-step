@@ -32,7 +32,13 @@ export default {
           name: 'layout',
           path: '/vue-next/components/layout',
           component: () => import('tdesign-vue-next/container/docs/container.md'),
-        }
+        },
+        {
+          title: 'Divider 分割线',
+          name: 'divider',
+          path: '/vue-next/components/divider',
+          component: () => import('tdesign-vue-next/divider/docs/divider.md'),
+        },
       ],
     },
     {
