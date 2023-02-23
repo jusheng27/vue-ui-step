@@ -9,3 +9,10 @@ spline: layout
 ## 基础用法
 对不同段落的文本进行分割。
 {{ basic }}
+
+## 虚线
+您可以设置分隔符的样式。
+{{ borderStyle }}
+
+## 垂直分割线
+{{ vertical }}
