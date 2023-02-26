@@ -1,6 +1,7 @@
 // 基础
 
 // 布局
+export * from './grid';
 export * from './container';
 export * from './divider';
 

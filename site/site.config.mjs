@@ -28,6 +28,12 @@ export default {
       type: 'component',
       children: [
         {
+          title: 'Grid 栅格',
+          name: 'grid',
+          path: '/vue-next/components/grid',
+          component: () => import('tdesign-vue-next/grid/docs/grid.md'),
+        },
+        {
           title: 'Container 布局',
           name: 'layout',
           path: '/vue-next/components/layout',
