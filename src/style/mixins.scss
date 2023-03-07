@@ -1,0 +1,13 @@
+@use "var" as *;
+
+// Break-points
+@mixin res($key, $map: $breakpoints) {
+  // loop breakpoint Map, return if present
+  @if map-has-key($map, $key) {
+    @media only screen and #{unquote(map-get($map, $key))} {
+      @content;
+    }
+  } @else {
+    @warn "Undefined points: `#{$map}`";
+  }
+}
