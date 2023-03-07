@@ -2,19 +2,27 @@
   <component
     :is="tag"
     :class="['el-row', `is-justify-${justify}`, `is-align-${align}`]"
+    :style="style"
   >
     <slot />
   </component>
 </template>
 
 <script lang="ts" setup>
-import { PropType } from 'vue';
+import {
+  computed, CSSProperties, PropType, provide,
+} from 'vue';
+import { rowContextKey } from './token';
 
 defineOptions({
   name: 'ElRow',
 });
 
-defineProps({
+const props = defineProps({
+  gutter: {
+    type: Number,
+    default: 0,
+  },
   justify: {
     type: String as PropType<'start' | 'center' | 'end' | 'space-between' | 'space-around' | 'space-evenly'>,
     default: 'start',
@@ -27,6 +35,20 @@ defineProps({
     type: String,
     default: 'div',
   },
+});
+
+provide(rowContextKey, {
+  gutter: computed(() => props.gutter),
+});
+
+const style = computed(() => {
+  const styles: CSSProperties = {};
+
+  if (props.gutter) {
+    styles.marginLeft = styles.marginRight = `-${props.gutter / 2}px`;
+  }
+
+  return styles;
 });
 </script>
 

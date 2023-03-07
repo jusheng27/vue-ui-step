@@ -2,12 +2,17 @@
   <component
     :is="tag"
     :class="['el-col', `el-col-${span}`]"
+    :style="style"
   >
     <slot />
   </component>
 </template>
 
 <script lang="ts" setup>
+import { CSSProperties, inject } from 'vue';
+import { computed } from '@vue/reactivity';
+import { rowContextKey } from './token';
+
 defineOptions({
   name: 'ElCol',
 });
@@ -21,6 +26,18 @@ defineProps({
     type: String,
     default: 'div',
   },
+});
+
+const { gutter } = inject(rowContextKey, { gutter: computed(() => 0) });
+
+const style = computed(() => {
+  const styles: CSSProperties = {};
+
+  if (gutter) {
+    styles.paddingLeft = styles.paddingRight = `${gutter.value / 2}px`;
+  }
+
+  return styles;
 });
 </script>
 

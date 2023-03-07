@@ -94,6 +94,7 @@ module.exports = {
     curly: 'error', // 强制if括号包裹，无效
     'lodash/import-scope': ['error', 'method'],
     'max-len': ['error', { code: 150 }],
+    'no-multi-assign': 0,
   },
   globals: {
     CustomRequired: true,
