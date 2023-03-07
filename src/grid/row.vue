@@ -12,7 +12,7 @@
 import {
   computed, CSSProperties, PropType, provide,
 } from 'vue';
-import { rowContextKey } from './token';
+import { rowContextKey } from './constrants';
 
 defineOptions({
   name: 'ElRow',
