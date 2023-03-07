@@ -1,7 +1,10 @@
 <template>
-  <div :class="['el-col', `el-col-${span}`]">
+  <component
+    :is="tag"
+    :class="['el-col', `el-col-${span}`]"
+  >
     <slot />
-  </div>
+  </component>
 </template>
 
 <script lang="ts" setup>
@@ -13,6 +16,10 @@ defineProps({
   span: {
     type: Number,
     default: 24,
+  },
+  tag: {
+    type: String,
+    default: 'div',
   },
 });
 </script>

@@ -1,7 +1,10 @@
 <template>
-  <div :class="['el-row', `is-justify-${justify}`, `is-align-${align}`]">
+  <component
+    :is="tag"
+    :class="['el-row', `is-justify-${justify}`, `is-align-${align}`]"
+  >
     <slot />
-  </div>
+  </component>
 </template>
 
 <script lang="ts" setup>
@@ -19,6 +22,10 @@ defineProps({
   align: {
     type: String as PropType<'flex-start' | 'center' | 'flex-end'>,
     default: 'flex-start',
+  },
+  tag: {
+    type: String,
+    default: 'div',
   },
 });
 </script>
