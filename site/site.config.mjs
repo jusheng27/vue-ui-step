@@ -45,6 +45,12 @@ export default {
           path: '/vue-next/components/divider',
           component: () => import('tdesign-vue-next/divider/docs/divider.md'),
         },
+        {
+          title: 'Space 间距',
+          name: 'space',
+          path: '/vue-next/components/space',
+          component: () => import('tdesign-vue-next/space/docs/space.md'),
+        },
       ],
     },
     {

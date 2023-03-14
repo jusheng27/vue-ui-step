@@ -4,6 +4,7 @@
 export * from './grid';
 export * from './container';
 export * from './divider';
+export * from './space';
 
 // 导航
 
